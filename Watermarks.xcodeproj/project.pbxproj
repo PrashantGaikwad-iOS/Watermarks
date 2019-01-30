@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77AA255766761EBFE893A96B /* Pods_Watermarks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492EE16D48D2377794CE02FF /* Pods_Watermarks.framework */; };
 		894FA97621FF1EC300AAB125 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FA97521FF1EC300AAB125 /* AppDelegate.swift */; };
 		894FA97821FF1EC300AAB125 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894FA97721FF1EC300AAB125 /* ViewController.swift */; };
 		894FA97B21FF1EC300AAB125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894FA97921FF1EC300AAB125 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FE0E4867AF8F85904AAD0B7 /* Pods-Watermarks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watermarks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Watermarks/Pods-Watermarks.release.xcconfig"; sourceTree = "<group>"; };
+		492EE16D48D2377794CE02FF /* Pods_Watermarks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Watermarks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F0F619FE2466E1D5FD2983A /* Pods-Watermarks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watermarks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Watermarks/Pods-Watermarks.debug.xcconfig"; sourceTree = "<group>"; };
 		894FA97221FF1EC300AAB125 /* Watermarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Watermarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		894FA97521FF1EC300AAB125 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		894FA97721FF1EC300AAB125 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77AA255766761EBFE893A96B /* Pods_Watermarks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				894FA97421FF1EC300AAB125 /* Watermarks */,
 				894FA97321FF1EC300AAB125 /* Products */,
+				92F64BDED0AB3A4CEEE3E356 /* Pods */,
+				B05E3D0108EC9352BAE1997A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = Watermarks;
 			sourceTree = "<group>";
 		};
+		92F64BDED0AB3A4CEEE3E356 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F0F619FE2466E1D5FD2983A /* Pods-Watermarks.debug.xcconfig */,
+				3FE0E4867AF8F85904AAD0B7 /* Pods-Watermarks.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B05E3D0108EC9352BAE1997A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				492EE16D48D2377794CE02FF /* Pods_Watermarks.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 894FA98421FF1EC700AAB125 /* Build configuration list for PBXNativeTarget "Watermarks" */;
 			buildPhases = (
+				20F3376E2636507C4C0CB3B2 /* [CP] Check Pods Manifest.lock */,
 				894FA96E21FF1EC300AAB125 /* Sources */,
 				894FA96F21FF1EC300AAB125 /* Frameworks */,
 				894FA97021FF1EC300AAB125 /* Resources */,
+				650594F8C548CA691AAC3531 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20F3376E2636507C4C0CB3B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Watermarks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		650594F8C548CA691AAC3531 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Watermarks/Pods-Watermarks-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MediaWatermark/MediaWatermark.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MediaWatermark.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Watermarks/Pods-Watermarks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		894FA96E21FF1EC300AAB125 /* Sources */ = {
@@ -280,6 +345,7 @@
 		};
 		894FA98521FF1EC700AAB125 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F0F619FE2466E1D5FD2983A /* Pods-Watermarks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +364,7 @@
 		};
 		894FA98621FF1EC700AAB125 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FE0E4867AF8F85904AAD0B7 /* Pods-Watermarks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
