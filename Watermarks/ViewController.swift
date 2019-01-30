@@ -32,6 +32,35 @@ class ViewController: UIViewController {
         mediaProcessor.processElements(item: item) { [weak self] (result, error) in
             self?.baseImageView.image = result.image
         }
+        
+        
+        
+        // adding over video
+        /*
+         
+         if let item = MediaItem(url: url) {
+         let logoImage = UIImage(named: "logo")
+         
+         let firstElement = MediaElement(image: logoImage!)
+         firstElement.frame = CGRect(x: 0, y: 0, width: logoImage!.size.width, height: logoImage!.size.height)
+         
+         let testStr = "Attributed Text"
+         let attributes = [ NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont.systemFont(ofSize: 35) ]
+         let attrStr = NSAttributedString(string: testStr, attributes: attributes)
+         
+         let secondElement = MediaElement(text: attrStr)
+         secondElement.frame = CGRect(x: 300, y: 300, width: logoImage!.size.width, height: logoImage!.size.height)
+         
+         item.add(elements: [firstElement, secondElement])
+         
+         let mediaProcessor = MediaProcessor()
+         mediaProcessor.processElements(item: item) { [weak self] (result, error) in
+         self?.videoPlayer.url = result.processedUrl
+         self?.videoPlayer.playFromBeginning()
+         }
+         }
+         
+         */
     }
 }
 

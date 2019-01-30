@@ -1,0 +1,16 @@
+PODS:
+  - MediaWatermark (0.3.1)
+
+DEPENDENCIES:
+  - MediaWatermark
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MediaWatermark
+
+SPEC CHECKSUMS:
+  MediaWatermark: a66d86cd40bc01840c6f810ad036828c08408b8b
+
+PODFILE CHECKSUM: b8f14da7e4a869a8d62b7116189bd660623b341f
+
+COCOAPODS: 1.5.2
